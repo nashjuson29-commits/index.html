@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine's Surprise</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 380px;
+    }
+
+    h1 {
+        color: #e91e63;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #555;
+        font-size: 18px;
+    }
+
+    .heart {
+        font-size: 50px;
+        color: #e91e63;
+        animation: beat 1s infinite;
+        margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        background-color: #e91e63;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #c2185b;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #e91e63;
+        font-weight: bold;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="heart">❤️</div>
+    <h1>Hello Jai, I have something special to ask you...</h1>
+
+    <button onclick="showMessage()">Open Me</button>
+
+    <div id="message">
+        Will you be my Valentine? ❤️
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
