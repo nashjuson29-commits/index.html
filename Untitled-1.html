@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nurse Valentine</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #cce7ff, #ffe6f0);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 380px;
+    }
+
+    h1 {
+        color: #e91e63;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #555;
+        font-size: 18px;
+    }
+
+    .icon {
+        font-size: 50px;
+        animation: pulse 1.2s infinite;
+        margin-bottom: 10px;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        background-color: #e91e63;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #c2185b;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #e91e63;
+        font-weight: bold;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="icon">🩺❤️</div>
+    <h1>Patient: My Heart</h1>
+    <p>Diagnosis: Increased heart rate whenever you're around.</p>
+    <p>Prescription: One special question for you...</p>
+
+    <button onclick="showMessage()">Check Patient Chart</button>
+
+    <div id="message">
+        Will you be my Valentine, Nurse? ❤️
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
